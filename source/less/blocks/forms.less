@@ -1,14 +1,33 @@
 .form__title {
+  margin: 0;
+  padding: 27px 0px 37px;
   .oswald(36, 36);
   text-transform: unset;
 }
 
 .form__request {
+  margin: 0;
+  padding-bottom: 20px;
   .oswald(14, 18);
 }
 
-.main__form fieldset {
+.form__forms {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 17px;
+}
+
+.form__block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
   border: none;
+
+  .oswald(16, 18);
+  color: #444444;
 }
 
 .form__block legend {
@@ -17,30 +36,104 @@
   .text-black();
 }
 
-.form__block,
+.form__block label {
+  display: flex;
+  align-items: center;
+  padding-bottom: 14px;
+}
+
 .form__block input,
 .form__block textarea {
+  flex-grow: 1;
+  margin: 0;
+  margin-left: 12px;
+  padding: 0 15px;
+  border: 1px solid #E7E7E7;
+  height: 45px;
+
   .oswald(16, 18);
   color: #444444;
 }
 
-.main__form .form__block-target {
+.form__block label:last-child {
+  padding: 0;
+}
+
+.form__block textarea {
+  margin: 0;
+  padding-top: 13px;
+  height: auto;
+  resize: none;
+}
+
+.form__block-parameters {
+  padding: 19px 0 27px;
+}
+
+.form__block-target {
+  padding: 20px 20px 28px;
   color: #222222;
   border-top: 1px solid #D9D9D9;
   border-bottom: 1px solid #D9D9D9;
 }
 
+.form__block-target label {
+  padding-bottom: 25px;
+}
+
+.form__block-target input {
+  position: absolute;
+}
+
+.form__block-contacts {
+  padding-bottom: 17px;
+}
+
+.form__block-contacts legend {
+  padding: 26px 0 32px
+}
+
+.form__block-comments {
+  padding-bottom: 17px;
+}
+
+.form__block-comments legend {
+  padding: 10px 0 34px;
+}
+
 .form__block-other {
+  padding-bottom: 34px;
   .text-black();
 }
 
+.form__block-other legend {
+  padding: 10px 0 34px;
+}
+
+.form__block-other input {
+  position: absolute;
+}
+
+.form__block-other label {
+  padding-bottom: 25px;
+}
+
 .button-request {
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 7px 0;
   width: 100%;
   border: none;
   .oswald(16, 20);
 }
 
 .main__form small {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  width: 50%;
+
+  text-align: center;
   .arial(14, 16);
   .text-black();
 }
@@ -48,5 +141,3 @@
 .form .main__contacts {
   .bg-grey();
 }
-
-second::part

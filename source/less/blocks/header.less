@@ -3,23 +3,256 @@
 }
 
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.site-list__item {
-  text-align: center;
-}
-
-.site-list__item a {
-  .oswald(20, 20, 500);
-  text-decoration: none;
-  color: #000000;
-}
-
-.page__logo,
-.site-list__item {
+.page__logo {
+  align-self: flex-start;
+  margin: 0;
+  padding-bottom: 16px;
   border-bottom: 1px solid #e6e6e6;
 }
 
+.page__logo-tablet,
+.page__logo-desktop {
+  display: none;
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.site-list__item {
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.site-list__link {
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  .oswald(20, 20, 500);
+  text-decoration: none;
+  .text-black();
+}
+
+// Promo
+
+.header__promo {
+  padding-top: 27px;
+  padding-bottom: 22px;
+  .text-white();
+  background: url(/img/index-background-mobile@1x.jpg) no-repeat;
+}
+
+.promo__title {
+  margin: 0;
+  width: 269px;
+  text-align: center;
+  .oswald(36, 36);
+  text-transform: initial;
+}
+
+.promo__slogan {
+  margin: 0;
+  padding-top: 21px;
+  padding-bottom: 29px;
+  width: 218px;
+  text-align: center;
+  .oswald(14, 14);
+}
+
+.promo__img-tablet,
+.promo__img-desktop {
+  display: none;
+}
+
+.promo__button {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  .oswald(14, 18);
+}
+
+// Tablet ---------------------------------------------------
+
+@media (min-width: @tablet-width) {
+  .header__block {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 12px 30px 35px 30px;
+  }
+
+  .page__logo {
+    padding: 0;
+    border: none;
+  }
+
+  .page__logo-mobile,
+  .page__logo-desktop {
+    display: none;
+  }
+
+  .page__logo-tablet {
+    display: block;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 4px;
+    width: 440px;
+  }
+
+  .site-list__item {
+    border: none;
+  }
+
+  .site-list__link {
+    padding-top: 0;
+    padding-bottom: 8px;
+    .oswald(18, 24);
+  }
+
+  .site-list__item--active {
+    border-bottom: 2px solid #68B738;
+  }
+
+  // Promo
+
+  .header__promo {
+    padding-left: 117px;
+    padding-right: 117px;
+    min-height: 837px;
+    .text-black();
+    background-image: none;
+  }
+
+  .header__promo .container {
+    position: relative;
+    padding: 0;
+  }
+
+  .promo__title {
+    width: 414px;
+    text-align: start;
+    .oswald(60, 60);
+    text-transform: initial;
+  }
+
+  .promo__slogan {
+    padding: 41px 0 49px 0;
+    width: 414px;
+    text-align: start;
+    .oswald(20, 20);
+  }
+
+  .promo__img-mobile,
+  .promo__img-desktop {
+    display: none;
+  }
+
+  .promo__img-tablet {
+    display: block;
+    position: absolute;
+    top: 201px;
+    left: 29px;
+  }
+
+  .promo__button {
+    position: relative;
+    padding: 14px 26px;
+    max-width: 244px;
+
+    .oswald(20, 26);
+  }
+}
+
+// Desktop ------------------------------------------------
+
+@media (min-width: @desktop-width) {
+  .page .page__header {
+    padding-bottom: 82px;
+    background: url(../../img/index-background-desktop@1x.jpg) no-repeat top right;
+  }
+
+  .header__block {
+    margin: 0 auto;
+    padding: 41px 30px 32px;
+    max-width: 1280px;
+  }
+
+  .page__logo-mobile,
+  .page__logo-tablet {
+    display: none;
+  }
+
+  .page__logo-desktop {
+    display: block;
+  }
+
+  .main-nav__list {
+    min-width: 478px;
+  }
+
+  .site-list__item--active {
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .catalog .site-list__item--active {
+    border-bottom: 2px solid #68b738;
+  }
+
+  .site-list__link {
+    .oswald(20, 30);
+    .text-white();
+  }
+
+  .catalog .site-list__link {
+    .text-black();
+  }
+
+  // Promo
+
+  .header__promo {
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 54px;
+    min-height: 547px;
+  }
+
+  .header__promo .container {
+    padding: 0 80px;
+    max-width: 1280px;
+  }
+
+  .promo__title {
+    padding-top: 82px;
+  }
+
+  .promo__slogan {
+    padding: 40px 0 52px 0;
+  }
+
+  .promo__img-mobile,
+  .promo__img-tablet {
+    display: none;
+  }
+
+  .promo__img-desktop {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 558px;
+  }
+
+}
