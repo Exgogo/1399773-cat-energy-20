@@ -1,15 +1,24 @@
+.main__other-products {
+  padding-top: 28px;
+  padding-bottom: 35px;
+}
+
 .other-products__title {
+  margin: 0;
+  padding-bottom: 35px;
   .oswald(24, 24);
   text-transform: unset;
 }
 
 .other-products__list {
   margin: 0;
+  margin-bottom: 39px;
   padding: 0;
   list-style: none;
 }
 
 .other-products__item {
+  padding: 13px 0 19px;
   border-top: 1px solid #CDCDCD;
 }
 
@@ -18,20 +27,137 @@
 }
 
 .other-products__item h3 {
+  margin: 0;
+  margin-bottom: 13px;
   .oswald(16, 16);
   color: #222222;
 }
 
 .other-products__info {
+  display: flex;
+  justify-content: space-between;
   .arial(14, 14);
 }
 
+.other-products__item .button {
+  margin-top: 15px;
+}
+
 .other-products__gift {
+  margin: 0 auto;
+  padding: 186px 59px 30px;
+  width: 280px;
+  height: 289px;
+  text-align: center;
   background: url(../../img/gift-photo-mobile@1x.jpg) no-repeat;
-  .bg-green();
 }
 
 .gift__paragraph {
+  margin: 0;
+  width: 161px;
   .arial(16, 20);
   .text-white();
+}
+
+@media (min-width: @tablet-width) {
+  .main__other-products {
+    padding-bottom: 76px;
+  }
+
+  .other-products__title {
+    padding: 0 37px 80px;
+    .oswald(36 ,36);
+    text-transform: initial;
+  }
+
+  .other-products__list {
+    margin-bottom: 69px;
+    border-left: 1px solid #CDCDCD;
+    border-right: 1px solid #CDCDCD;
+  }
+
+  .other-products__item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 26px 37px 28px;
+  }
+
+  .other-products__item h3 {
+    .oswald(20, 20);
+  }
+
+  .other-products__info {
+    margin-left: auto;
+    .arial(16, 20);
+  }
+
+  .other-products__cost {
+    width: 94px;
+    text-align: right;
+  }
+
+  .other-products__gift {
+    margin: 0;
+    padding: 71px 124px 69px 423px;
+    width: 100%;
+    height: 200px;
+    background: url(../../img/gift-photo-tablet@1x.jpg) no-repeat;
+    background-size: 100%;
+  }
+
+  .gift__paragraph {
+    width: 100%;
+    text-align: start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main__other-products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 35px 30px 86px;
+  }
+
+  .other-products__title {
+    padding: 0 0 81px;
+    width: 100%;
+  }
+
+  .other-products__list {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-right: 79px;
+    border: none;
+  }
+
+  .other-products__item {
+    align-items: center;
+    padding: 15px 0 17px;
+  }
+
+  .other-products__item h3 {
+    margin: 0;
+  }
+
+  .other-products__info {
+    width: 287px;
+  }
+
+  .other-products__item .button {
+    margin: 0;
+    margin-left: 39px;
+    width: 244px;
+  }
+
+  .other-products__gift {
+    padding: 185px 42px 42px;
+    width: 245px;
+    height: 289px;
+    background: url(../../img/gift-photo-desktop@1x.jpg) no-repeat;
+    background-size: auto;
+  }
+
+  .gift__paragraph {
+    text-align: center;
+  }
 }
