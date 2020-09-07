@@ -13,8 +13,7 @@
 
 .page__logo {
   align-self: flex-start;
-  margin: 0;
-  padding-bottom: 16px;
+  padding: 0 20px 16px 20px;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -182,7 +181,7 @@
 @media (min-width: @desktop-width) {
   .page .page__header {
     padding-bottom: 82px;
-    background: url(../../img/index-background-desktop@1x.jpg) no-repeat top right;
+    background: url(/img/index-background-desktop@1x.jpg) no-repeat top right;
   }
 
   .header__block {
@@ -204,21 +203,21 @@
     min-width: 478px;
   }
 
-  .site-list__item--active {
+  .page .site-list__item--active {
     border-bottom: 2px solid #ffffff;
   }
 
-  .catalog .site-list__item--active {
+  .site-list__item--active {
     border-bottom: 2px solid #68b738;
   }
 
-  .site-list__link {
+  .page .site-list__link {
     .oswald(20, 30);
     .text-white();
   }
 
-  .catalog .site-list__link {
-    .text-black();
+  .site-list__link {
+    .oswald(20, 30);
   }
 
   // Promo
