@@ -13,12 +13,12 @@
 
     <header class="page__header">
       <div class="header__block">
-        <div class="page__logo container">
+        <div class="page__logo">
           <a class="page__logo-mobile" href="index.html"><img src="img/logo-mobile.svg" width="190" height="38" alt="Кэт-энерджи лого"></a>
           <a class="page__logo-tablet" href="index.html"><img src="img/logo-tablet2.svg" width="174" height="52" alt="Кэт-энерджи лого"></a>
           <a class="page__logo-desktop" href="index.html"><img src="img/logo-desktop.svg" width="202" height="59" alt="Кэт-энерджи лого"></a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -81,31 +81,36 @@
       <section class="main__example">
         <div class="wrapper">
           <div class="container">
-            <h2 class="example__title example__title--bg">Живой пример</h2>
+            <h2 class="example__title">Живой пример</h2>
             <div class="example__results-wrapper">
               <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
               <dl class="example__results">
-                <dt class="example__result">5 кг</dt>
-                <dd>Снижение веса</dd>
-                <dt class="example__result">60 дней</dt>
-                <dd>Затрачено времени</dd>
+                <div class="result-wrap">
+                  <dt class="example__result">5 кг</dt>
+                  <dd>Снижение <br>веса</dd>
+                </div>
+                <div class="result-wrap">
+                  <dt class="example__result">60 дней</dt>
+                  <dd>Затрачено <br>времени</dd>
+                </div>
               </dl>
-              <p class="example__cost example__cost--side">
+              <p class="example__cost">
                 <span>Затраты на питание:</span>
                 <span>15 000 РУБ.</span>
               </p>
             </div>
           </div>
           <div class="example__slider">
-            <img src="img/before-mobile@1x.png" alt="Пухлый кот до начала правильного питания">
-            <img src="img/after-mobile@1x.png" alt="Стройный кот после курса правильного питания">
+            <!-- <img class="slider__before slider--active" src="img/before-mobile@1x.png" width="311" height="232" alt="Пухлый кот до начала правильного питания"> -->
+            <img class="slider__before slider--active" src="img/before-tablet@1x.png" width="708" height="620" alt="Пухлый кот до начала правильного питания">
+            <img class="slider__after" src="img/after-mobile@1x.png" alt="Стройный кот после курса правильного питания">
             <div class="example__scale">
               <!-- мб использовать input range -->
-              Было
+              <span class="example__scale-text">Было</span>
               <div class="scale__line">
                 <div class="scale__"></div>
               </div>
-              Стало
+              <span class="example__scale-text">Стало</span>
             </div>
           </div>
         </div>
@@ -113,7 +118,7 @@
 
       <section class="main__contacts">
         <div class="container">
-          <h3>приглашаем к сотрудничеству дилеров!</h3>
+          <h3>приглашаем<br> к сотрудничеству дилеров!</h3>
           <div class="contacts__paragraph-wrapper">
             <p>ул. Большая Конюшенная, д. 19/8</p>
             <p>Санкт-Петербург</p>
