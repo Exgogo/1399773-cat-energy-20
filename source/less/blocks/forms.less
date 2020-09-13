@@ -18,6 +18,12 @@
   padding-bottom: 17px;
 }
 
+@media (max-width: @mobile-width-only) {
+  .form__block-wrap.container {
+    padding: 0;
+  }
+}
+
 .form__block {
   display: flex;
   flex-direction: column;
@@ -29,6 +35,10 @@
 
   .oswald(16, 18);
   color: #444444;
+}
+
+.title-line {
+  border-top: 2px solid #68B738;
 }
 
 .form__block legend {
@@ -64,11 +74,14 @@
   padding: 19px 20px 27px;
 }
 
+.form__block--border {
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+
 .form__block-target {
   padding: 20px 20px 28px 65px;
   color: #222222;
-  border-top: 1px solid #D9D9D9;
-  border-bottom: 1px solid #D9D9D9;
 }
 
 .form__block-target label {
@@ -80,36 +93,40 @@
 }
 
 .form__block-contacts {
+  margin-top: 43px;
   padding-bottom: 17px;
 }
 
 .form__block-contacts legend {
-  padding: 26px 0 32px
+  margin-bottom: 32px;
 }
 
 .form__block-comments {
+  margin-top: 27px;
   padding-bottom: 17px;
 }
 
 .form__block-comments legend {
-  padding: 10px 0 34px;
+  margin-bottom: 34px;
 }
 
 .form__block textarea {
   margin: 0;
   padding-top: 13px;
   padding-bottom: 10px;
+  width: 100%;
   height: 150px;
   resize: none;
 }
 
 .form__block-other {
+  margin-top: 27px;
   padding-bottom: 34px;
   .text-black();
 }
 
 .form__block-other legend {
-  padding: 10px 0 34px;
+  margin-bottom: 34px;
 }
 
 .form__block-other input {
@@ -151,14 +168,10 @@
   .form__forms {
     padding-bottom: 72px;
   }
-  .main__form {
-    padding-right: 67px;
-    padding-left: 70px;
-  }
 
   .main__form .container {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 67px;
+    padding-left: 70px;
   }
 
   .form__title {
@@ -202,7 +215,13 @@
     padding: 33px 0 36px;
   }
 
-  .form .form__block-target {
+  .form__block--border {
+    border: none;
+  }
+
+  .form__block-target {
+    margin-top: 36px;
+    margin-bottom: 40px;
     padding: 30px;
     padding-left: 88px;
     border: 1px solid #E7E7E7;
@@ -213,19 +232,21 @@
   }
 
   .form__block-contacts {
-    padding-bottom: 35px;
+    margin-top: 59px;
+    padding-bottom: 49px;
   }
 
   .form__block-contacts legend {
-    padding: 75px 0 76px;
+    margin-bottom: 88px;
   }
 
   .form__block-comments {
-    padding-bottom: 40px;
+    margin-top: 40px;
+    padding-bottom: 49px;
   }
 
   .form__block-comments legend {
-    padding: 30px 0 76px;
+    margin-bottom: 88px;
   }
 
   .form__block-comments textarea {
@@ -234,15 +255,19 @@
   }
 
   .form__block-other {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin-top: 40px;
     padding-bottom: 17px;
   }
 
   .form__block-other legend {
-    padding: 25px 0 62px;
+    margin-bottom: 69px;
+  }
+
+  .form__block-other .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .form__block-other label,
@@ -274,13 +299,9 @@
 
 @media (min-width: @desktop-width) {
   .main__form .container {
-    margin: 0;
-  }
-
-  .main__form {
-    margin: 0 auto;
-    padding: 0 30px;
-    max-width: 1280px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 1280px;
   }
 
   .form__title {
@@ -296,7 +317,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1220px;
   }
 
   .form__block-wrap .form__block {
@@ -308,12 +328,12 @@
     padding: 0;
   }
 
-  .form__block-contacts {
-    padding-bottom: 39px;
+  .form__block-target {
+    margin: 0;
   }
 
-  .form__block-contacts legend {
-    padding: 69px 0 76px;
+  .form__block-contacts {
+    padding-bottom: 39px;
   }
 
   .block-contacts-wrap {
@@ -329,10 +349,6 @@
 
   .form__block-other {
     padding-bottom: 24px;
-  }
-
-  .form__block-other legend {
-    padding-top: 27px;
   }
 
   .form__block-other label {
