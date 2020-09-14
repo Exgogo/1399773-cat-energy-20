@@ -25,11 +25,14 @@
   display: block;
   font-size: 0;
   cursor: pointer;
-}
+  width: fit-content;
 
-@media (max-width: @mobile-width-only) {
-  .block-logo__link {
-    width: fit-content;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -86,6 +89,14 @@
 .site-list__item {
   text-align: center;
   border-bottom: 1px solid #e6e6e6;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .site-list__link {
@@ -103,13 +114,11 @@
   padding-top: 27px;
   padding-bottom: 22px;
   .text-white();
-  background: url(/img/index-background-mobile@1x.jpg) center 0 no-repeat,
+  background: url(/img/index-background-mobile@1x.jpg) center top no-repeat,
   linear-gradient(to bottom, #63a739 305px, #ffffff 197px);
-}
 
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .header__promo {
-    background: url("../img/index-background-mobile@2x.jpg") center 0 / 320px 305px no-repeat,
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url(/img/index-background-mobile@2x.jpg) center top / 320px 305px no-repeat,
     linear-gradient(to bottom, #63a739 305px, #ffffff 197px);
   }
 }
@@ -243,13 +252,13 @@
 @media (min-width: @desktop-width) {
   .page .page__header {
     margin-bottom: 82px;
-    background: url(/img/index-background-desktop@1x.jpg) no-repeat top right,
+    background: url(/img/index-background-desktop@1x.jpg) no-repeat top right / 50%,
     linear-gradient(to left, #63a739 50%, #ffffff 50%);
-  }
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background: url(/img/index-background-desktop@2x.jpg) no-repeat top right,
-    linear-gradient(to left, #63a739 50%, #ffffff 50%);
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url(/img/index-background-desktop@2x.jpg) no-repeat top right / 50%,
+      linear-gradient(to left, #63a739 50%, #ffffff 50%);
+    }
   }
 
   .header__block {
@@ -295,7 +304,7 @@
 
   .header__promo .container {
     position: relative;
-    padding: 0 80px;
+    padding: 0 110px;
     max-width: 1280px;
   }
 
@@ -310,7 +319,7 @@
   .promo__img {
     position: absolute;
     top: 0;
-    left: 448px;
+    left: 478px;
     width: 552px;
     z-index: 0;
     height: 499px;

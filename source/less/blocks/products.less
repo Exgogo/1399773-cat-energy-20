@@ -22,23 +22,25 @@
 .products__item {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 19px;
   padding-bottom: 25px;
   border-bottom: 1px solid #EBEBEB;
   list-style: none;
 }
 
 .products__img-block {
+  display: block;
   width: 50%;
-  min-height: 112px;
+  font-size: 0;
   text-align: center;
 }
 
 .products__table {
+  padding-bottom: 10px;
   width: 50%;
 }
 
 .products__caption {
+  padding-top: 19px;
   padding-bottom: 14px;
   width: 76px;
   text-align: start;
@@ -53,6 +55,7 @@
 
 .products__table td {
   padding: 0;
+  padding-bottom: 4px;
   .arial(12, 16);
 }
 
@@ -60,14 +63,23 @@
   text-align: end;
 }
 
-.products__item .button {
-  margin-top: 13px;
-}
-
 .products__item-more {
+  position: relative;
   flex-direction: column;
   text-align: center;
   padding: 79px 20px 25px;
+}
+
+.products__item-more::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  background: url(/img/icon-plus-mobile.svg) no-repeat;
+  opacity: 0.2;
 }
 
 .products__item-more h3 {
@@ -78,13 +90,21 @@
 }
 
 .products__item-more p {
-  margin: 0 0 8px;
+  margin: 0 0 21px;
   .arial(12, 16);
 }
 
 .products__show-all {
   color: #444444;
   .bg-grey();
+
+  &:hover {
+    background: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -117,10 +137,13 @@
 
   .products__img-block {
     position: absolute;
-    top: -73px;
-    left: 0;
-    width: 100%;
-    text-align: center;
+    bottom: 303px;
+    left: center;
+    width: fit-content;
+  }
+
+  .products__img {
+    width: auto;
   }
 
   .products__table {
@@ -129,6 +152,7 @@
 
   .products__caption {
     margin: 0 auto;
+    padding: 0 0 14px;
     width: 154px;
     text-align: center;
     .oswald(20, 24);
@@ -147,6 +171,16 @@
   .products__item-more {
     background-color: #ffffff;
     border: 2px solid #f2f2f2;
+  }
+
+  .products__item-more::before {
+    top: 52px;
+    left: 50%;
+    margin-left: -30px;
+    width: 60px;
+    height: 60px;
+    background: url(/img/plus.svg) no-repeat;
+    opacity: 1;
   }
 
   .products__item-more h3 {
