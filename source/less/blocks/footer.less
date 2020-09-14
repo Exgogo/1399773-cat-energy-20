@@ -17,6 +17,14 @@
 .footer__logo {
   align-self: center;
   padding-bottom: 32px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__socials-wrapper {
@@ -38,16 +46,43 @@
   list-style: none;
 }
 
+.footer__socials a {
+  display: block;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.socials__vk,
+.socials__insta {
+  &:hover path {
+    fill: #68B738;
+  }
+}
+
+.socials__fb:hover path {
+  stroke: #68B738;
+}
+
 .footer__creator {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding-top: 22px;
 }
 
 .creator__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   .arial(16, 18);
   text-decoration: none;
+
+  &:hover path {
+    fill: #68B738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -92,12 +127,15 @@
   }
 
   .footer__creator {
-    justify-content: flex-end;
     padding: 0;
     width: 33%;
   }
 
-  .footer__creator a:first-child {
+  .creator__name {
+    justify-content: flex-end;
+  }
+
+  .creator__name span {
     margin-right: 22px;
   }
 }
