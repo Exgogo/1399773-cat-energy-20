@@ -29,21 +29,21 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   border: none;
 
   .oswald(16, 18);
   color: #444444;
 }
 
-.title-line {
-  border-top: 2px solid #68B738;
-}
-
 .form__block legend {
+  margin-left: -20px;
+  padding: 0 20px;
   .oswald(24, 26);
   text-transform: initial;
   .text-black();
+  background-color: #ffffff;
 }
 
 .form__block label {
@@ -84,6 +84,10 @@
   }
 }
 
+.form__block-wrap {
+  margin-bottom: 20px;
+}
+
 .form__block-parameters {
   padding: 19px 20px 23px;
 }
@@ -101,6 +105,7 @@
 .form__block .block-target__label {
   position: relative;
   margin-bottom: 25px;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -127,13 +132,9 @@
   opacity: 0.3;
 }
 
-.form__block-contacts {
-  margin-top: 41px;
-  padding-bottom: 17px;
-}
-
-.title-wrap--size {
-  width: fit-content;
+.form__block-wrapper {
+  margin-top: 21px;
+  padding-bottom: 21px;
 }
 
 .form__block-contacts legend {
@@ -173,11 +174,6 @@
   margin-top: -10px;
 }
 
-.form__block-comments {
-  margin-top: 25px;
-  padding-bottom: 17px;
-}
-
 .form__block-comments legend {
   margin-bottom: 34px;
 }
@@ -191,8 +187,8 @@
 }
 
 .form__block-other {
-  margin-top: 23px;
-  padding-bottom: 38px;
+  margin-top: 8px;
+  padding-bottom: 20px;
   .text-black();
 }
 
@@ -202,8 +198,9 @@
 
 .form__block-other .block-other__label {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding-left: 46px;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -283,6 +280,8 @@
   }
 
   .form__block legend {
+    margin-left: -37px;
+    padding: 0 37px;
     .oswald(36, 36);
     text-transform: initial;
   }
@@ -305,6 +304,10 @@
     &:invalid {
       padding: 9px 17px;
     }
+  }
+
+  .form__block-wrap {
+    margin-bottom: 38px;
   }
 
   .form__block-parameters {
@@ -334,14 +337,17 @@
     }
   }
 
+  .form__block-wrapper {
+    padding-bottom: 18px;
+  }
+
   .form__block-contacts {
-    margin-top: 59px;
     padding-bottom: 48px;
   }
 
   .form__block-contacts legend {
     width: auto;
-    margin-bottom: 75px;
+    margin-bottom: 76px;
   }
 
   .contacts__svg {
@@ -355,8 +361,7 @@
   }
 
   .form__block-comments {
-    margin-top: 40px;
-    padding-bottom: 49px;
+    padding-bottom: 48px;
   }
 
   .form__block-comments legend {
@@ -369,15 +374,14 @@
   }
 
   .form__block-other {
-    margin-top: 32px;
-    padding-bottom: 17px;
+    padding-bottom: 0;
   }
 
   .form__block-other legend {
     margin-bottom: 62px;
   }
 
-  .form__block-other .container {
+  .form__block-other--wrap {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -418,6 +422,8 @@
 
 @media (min-width: @desktop-width) {
   .main__form .container {
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 30px;
     padding-right: 30px;
     width: 1280px;
@@ -444,10 +450,6 @@
     width: 570px;
   }
 
-  .form__block legend {
-    width: fit-content;
-  }
-
   .form .form__block-parameters {
     padding: 0;
   }
@@ -457,7 +459,7 @@
   }
 
   .form__block-contacts {
-    padding-bottom: 50px;
+    padding-bottom: 51px;
   }
 
   .form__block-contacts legend {
@@ -479,9 +481,12 @@
     width: 570px;
   }
 
+  .form__block-comments {
+    padding-bottom: 51px;
+  }
+
   .form__block-other {
-    margin-top: 34px;
-    padding-bottom: 24px;
+    padding-bottom: 5px;
   }
 
   .form__block-other .block-other__label {

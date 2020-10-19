@@ -18,11 +18,11 @@
   align-self: center;
   padding-bottom: 31px;
 
-  &:hover {
+  &[href]:hover {
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
   }
 }
@@ -48,21 +48,15 @@
 
 .footer__socials a {
   display: block;
+  color: #666666;
 
   &:active {
     opacity: 0.3;
   }
 }
 
-.socials__vk,
-.socials__insta {
-  &:hover path {
-    fill: #68B738;
-  }
-}
-
-.socials__fb:hover path {
-  stroke: #68B738;
+.socials__icon:hover {
+  color: #68B738;
 }
 
 .footer__creator {
@@ -76,8 +70,8 @@
   .arial(16, 18);
   text-decoration: none;
 
-  &:hover path {
-    fill: #68B738;
+  &:hover svg {
+    color: #68B738;
   }
 
   &:active {
