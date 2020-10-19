@@ -2,17 +2,21 @@
   background-color: #ffffff;
 }
 
+.catalog__main .main__contacts {
+  .bg-grey();
+}
+
 .main__contacts .container {
   display: flex;
   justify-content: space-between;
   padding-top: 28px;
-  padding-bottom: 22px;
+  padding-bottom: 26px;
 }
 
 .main__contacts h3 {
   margin: 0;
   width: 140px;
-  .oswald(16, 18);
+  .oswald(16, 20);
   color: #111111;
 }
 
@@ -25,31 +29,59 @@
   margin: 0;
 }
 
-.contacts__map-tablet,
-.contacts__map-desktop {
-  display: none;
-}
-
-.contacts__map-mobile {
-  display: block;
-}
-
-.catalog__main .main__contacts {
+.contacts__map-block {
+  position: relative;
+  font-size: 0;
   .bg-grey();
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 24%;
+    z-index: 2;
+    width: 57px;
+    height: 53px;
+    background: url(/img/map-pin.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+.contacts__map-block iframe {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 362px;
+  border: none;
+}
+
+.contacts__map-pictures {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.contacts__map-pictures img {
+  height: 362px;
 }
 
 @media (min-width: @tablet-width) {
   .main__contacts .container {
-    padding: 62px 72px 51px 71px;
+    padding: 62px 72px 60px 71px;
   }
 
   .main__contacts h3 {
+    padding-top: 3px;
     width: 171px;
-    .oswald(20, 22);
+    .oswald(20, 25);
   }
 
   .contacts__paragraph-wrapper {
     width: 159px;
+    text-align: right;
     .arial(16, 20);
   }
 
@@ -57,40 +89,55 @@
     margin-top: 19px;
   }
 
-  .contacts__map-mobile,
-  .contacts__map-desktop {
-    display: none;
+  .contacts__map-block::before {
+    top: 52%;
+    left: 29%;
+    width: 113px;
+    height: 106px;
   }
 
-  .contacts__map-tablet {
-    display: block;
+  .contacts__map-block iframe {
+    height: 400px;
+  }
+
+  .contacts__map-pictures img {
+    width: 768px;
+    height: 400px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main__contacts {
+    .bg-grey();
+  }
+
+  .main__contacts-wrap {
     position: relative;
     margin: 0 auto;
     max-width: 1440px;
-    .bg-grey();
   }
 
   .main__contacts .container {
     position: absolute;
     top: 95px;
     left: 110px;
+    z-index: 3;
 
-    padding: 62px 89px 51px 76px;
+    padding: 62px 85px 60px 76px;
     width: 570px;
     background-color: #ffffff;
   }
 
-  .contacts__map-mobile,
-  .contacts__map-tablet {
-    display: none;
+  .contacts__paragraph-wrapper {
+    text-align: start;
   }
 
-  .contacts__map-desktop {
-    display: block;
+  .contacts__map-block::before {
+    top: 73%;
+    left: 39%;
+  }
+
+  .contacts__map-pictures img {
+    width: 1440px;
   }
 }

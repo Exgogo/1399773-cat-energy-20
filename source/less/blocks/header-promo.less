@@ -1,0 +1,135 @@
+.header__promo {
+  padding-top: 27px;
+  padding-bottom: 22px;
+  .text-white();
+  background: url(/img/index-background-mobile@1x.jpg) center top no-repeat,
+  linear-gradient(to bottom, #63a739 305px, #ffffff 197px);
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url(/img/index-background-mobile@2x.jpg) center top / 320px 305px no-repeat,
+    linear-gradient(to bottom, #63a739 305px, #ffffff 197px);
+  }
+}
+
+.header__promo .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo__title {
+  margin: 0;
+  width: 269px;
+  text-align: center;
+  .oswald(36, 36);
+  text-transform: initial;
+}
+
+.promo__slogan {
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 28px;
+  width: 218px;
+  text-align: center;
+  .oswald(14, 14);
+}
+
+.header__promo picture {
+  font-size: 0;
+}
+
+.promo__img {
+  margin-bottom: 3px;
+}
+
+.promo__button {
+  align-self: stretch;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  .oswald(14, 18);
+}
+
+@media (min-width: @tablet-width) {
+  .header__promo {
+    position: relative;
+    padding-left: 117px;
+    padding-right: 117px;
+    min-height: 837px;
+    .text-black();
+    background: none;
+  }
+
+  .header__promo .container {
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .promo__title {
+    width: 414px;
+    text-align: start;
+    .oswald(60, 60);
+    text-transform: initial;
+  }
+
+  .promo__slogan {
+    padding: 41px 0 49px 0;
+    width: 414px;
+    text-align: start;
+    .oswald(20, 20);
+  }
+
+  .promo__img {
+    display: block;
+    position: absolute;
+    top: 228px;
+    left: 29px;
+    z-index: -1;
+    width: 709px;
+    height: 609px;
+  }
+
+  .promo__button {
+    position: relative;
+    margin-left: -5px;
+    padding: 14px 26px;
+    max-width: 244px;
+
+    .oswald(20, 26);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__promo {
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 54px;
+    min-height: 553px;
+  }
+
+  .header__promo .container {
+    position: relative;
+    padding: 0 110px;
+    max-width: 1280px;
+  }
+
+  .promo__title {
+    padding-top: 82px;
+  }
+
+  .promo__slogan {
+    padding: 40px 0 52px 0;
+  }
+
+  .promo__img {
+    position: absolute;
+    top: 0;
+    left: 478px;
+    width: 552px;
+    z-index: 0;
+    height: 499px;
+  }
+
+  .promo__button {
+    margin: 0;
+  }
+}

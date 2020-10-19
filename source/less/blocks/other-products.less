@@ -1,16 +1,21 @@
 .main__other-products {
-  margin-top: 45px;
+  margin-top: 42px;
   padding-bottom: 35px;
 }
 
 .other-products__title {
-  margin-bottom: 42px;
+  margin-top: 0;
+  margin-bottom: 34px;
+  margin-left: -20px;
   width: fit-content;
   .oswald(24, 24);
   text-transform: unset;
+  background-color: #ffffff;
 }
 
 .other-products__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   margin-bottom: 39px;
   padding: 0;
@@ -18,7 +23,7 @@
 }
 
 .other-products__item {
-  padding: 13px 0 19px;
+  padding: 12px 0 18px;
   border-top: 1px solid #CDCDCD;
 }
 
@@ -39,8 +44,11 @@
   .arial(14, 14);
 }
 
-.other-products__item .button {
+.other-products__button {
   margin-top: 15px;
+  padding: 10px 5px;
+  width: 100%;
+  .oswald(16, 20);
 }
 
 .other-products__gift {
@@ -60,11 +68,11 @@
   &::before {
     content: "";
     position: absolute;
-    top: 58px;
+    top: 65px;
     left: 50%;
-    margin-left: -39px;
-    width: 78px;
-    height: 80px;
+    margin-left: -28px;
+    width: 68px;
+    height: 60px;
     background: url(/img/icon-gift.svg) no-repeat;
   }
 }
@@ -82,13 +90,15 @@
   }
 
   .other-products__title {
-    margin-bottom: 92px;
+    margin-bottom: 80px;
+    margin-left: 0;
+    padding: 0 37px;
     .oswald(36 ,36);
     text-transform: initial;
   }
 
   .other-products__list {
-    margin-bottom: 69px;
+    margin-bottom: 68px;
     border-left: 1px solid #CDCDCD;
     border-right: 1px solid #CDCDCD;
   }
@@ -113,6 +123,13 @@
     text-align: right;
   }
 
+  @media (max-width: 1439px) {
+    .other-products__button {
+      margin-top: 13px;
+      padding: 9px 5px;
+    }
+  }
+
   .other-products__gift {
     margin: 0;
     padding: 71px 124px 69px 423px;
@@ -126,11 +143,11 @@
 
     &::before {
       top: 50%;
-      left: 78px;
-      margin-top: -41px;
+      left: 89px;
+      margin-top: -37px;
       margin-left: 0;
-      width: 80px;
-      height: 83px;
+      width: 60px;
+      height: 63px;
     }
   }
 
@@ -142,12 +159,13 @@
 
 @media (min-width: @desktop-width) {
   .main__other-products {
-    margin-top: 35px;
+    margin-top: 50px;
     padding-bottom: 86px;
   }
 
   .other-products__title {
     margin-bottom: 81px;
+    margin-left: -40px;
     width: fit-content;
     background-color: #ffffff;
   }
@@ -166,7 +184,8 @@
 
   .other-products__item {
     align-items: center;
-    padding: 15px 0 17px;
+    padding: 15px 0;
+    height: 100%;
   }
 
   .other-products__item h3 {
@@ -177,28 +196,29 @@
     width: 287px;
   }
 
-  .other-products__item .button {
+  .other-products__button {
     margin: 0;
     margin-left: 39px;
     width: 244px;
   }
 
   .other-products__gift {
+    align-self: flex-start;
     padding: 185px 42px 42px;
     width: 245px;
     background: url(/img/gift-photo-desktop@1x.jpg) no-repeat;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(/img/gift-photo-desktop@2x.jpg);
-      background-size: contain;
+      background-size: cover;
     }
 
     &::before {
-      top: 56px;
+      top: 61px;
       left: 50%;
       margin-top: 0;
-      margin-left: -40px;
-      width: 80px;
+      margin-left: -28px;
+      width: 57px;
       height: 83px;
     }
   }

@@ -16,13 +16,13 @@
 
 .footer__logo {
   align-self: center;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
 
-  &:hover {
+  &[href]:hover {
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
   }
 }
@@ -40,7 +40,7 @@
   justify-content: space-between;
 
   margin: 0;
-  padding: 20px 0 21px 0;
+  padding: 20px 0;
   width: 130px;
 
   list-style: none;
@@ -48,21 +48,15 @@
 
 .footer__socials a {
   display: block;
+  color: #666666;
 
   &:active {
     opacity: 0.3;
   }
 }
 
-.socials__vk,
-.socials__insta {
-  &:hover path {
-    fill: #68B738;
-  }
-}
-
-.socials__fb:hover path {
-  stroke: #68B738;
+.socials__icon:hover {
+  color: #68B738;
 }
 
 .footer__creator {
@@ -76,8 +70,8 @@
   .arial(16, 18);
   text-decoration: none;
 
-  &:hover path {
-    fill: #68B738;
+  &:hover svg {
+    color: #68B738;
   }
 
   &:active {
